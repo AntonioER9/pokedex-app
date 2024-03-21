@@ -38,7 +38,7 @@ export class PokemonService {
 
     let pokemon: Pokemon;
 
-    if (!isNaN(+term)) {
+    if (!isNaN(+term)) { //Si es un número
       pokemon = await this.pokemonModel.findOne({ no: term });
     }
 
@@ -81,7 +81,7 @@ export class PokemonService {
     // return { id };
     // const result = await this.pokemonModel.findByIdAndDelete( id );
     const { deletedCount } = await this.pokemonModel.deleteOne({ _id: id });
-    if (deletedCount === 0)
+    if (deletedCount === 0) //si no se elimino nada
       throw new BadRequestException(`Pokemon with id "${id}" not found`);
 
     return;
