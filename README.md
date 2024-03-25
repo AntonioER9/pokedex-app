@@ -48,10 +48,10 @@ docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
 ```
 
 
-
+<!-- 
 # Notas
 Heroku redeploy sin cambios:
 ```
 git commit --allow-empty -m "Tigger Heroku deploy"
 git push heroku <master|main>
-```
+``` -->
